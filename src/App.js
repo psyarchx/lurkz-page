@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Navbar from "./components/Navbar";
+import VideoHero from "./components/VideoHero";
+import { ThemeWrapper } from "./styles";
 
 function App() {
+
+  const [theme, setTheme] = React.useState("light");
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeWrapper backgroundColor={'#8E8E8E'}>
+      <Navbar />
+      <VideoHero />
+    </ThemeWrapper>
   );
 }
 
