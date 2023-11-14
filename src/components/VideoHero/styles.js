@@ -1,11 +1,26 @@
 import styled from 'styled-components';
 
+// make a componenet using <iframe> tag that plays a video as if it was a background video similiar to what <video> componenent does
+// https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
+
+export const VideoIframe = styled.iframe`
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  min-width: 140vw;
+  min-height: 80%;
+  pointer-events: none;
+
+`;  
+
 export const VideoHero = styled.div`
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  top: 120px;
+  top: 
 
   video {
     position: absolute;
